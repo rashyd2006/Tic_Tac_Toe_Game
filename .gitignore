@@ -1,0 +1,17 @@
+.vs/
+x64/
+Debug/
+Release/
+*.user
+*.suo
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.json
+bin/
+obj/
+*.cache
+*.exe
+*.dll
+*.vcxproj
+*.vcxproj.filters
