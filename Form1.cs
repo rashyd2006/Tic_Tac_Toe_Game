@@ -17,6 +17,18 @@ namespace WindowsFormsApp7
             InitializeComponent();
         }
 
+        private bool IsDraw(int count)
+        {
+            return count == 9;
+        }
+        private void ShowGameOverMessage()
+        {
+            MessageBox.Show("GameOver", "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private string GetWinnerName(int count)
+        {
+            return (count % 2 != 0) ? "Player1" : "Player2";
+        }
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Color whiteColor = Color.White;
