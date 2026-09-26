@@ -16,5 +16,19 @@ namespace WindowsFormsApp7
         {
             InitializeComponent();
         }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            Color whiteColor = Color.White;
+            Pen myPen = new Pen(whiteColor);
+            myPen.Width = 10;
+            // رسم الخطين الأفقيين (إزاحة كبيرة لليسار)
+            e.Graphics.DrawLine(myPen, 190, 240, 670, 240);
+            e.Graphics.DrawLine(myPen, 190, 400, 670, 400);
+
+            // رسم الخطين العموديين (إزاحة كبيرة لليسار)
+            e.Graphics.DrawLine(myPen, 360, 80, 360, 560);
+            e.Graphics.DrawLine(myPen, 520, 80, 520, 560);
+        }
     }
 }
