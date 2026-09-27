@@ -63,6 +63,22 @@ namespace WindowsFormsApp7
         {
             MessageBox.Show("Wrong Choice", "Wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void PreparingAndDisplayingTheEventOnTheScreen(object sender)
+        {
+            int Count = 0;
+
+            if (IsButtonAvailable(sender))
+            {
+                MakeMove(sender, ref Count);
+            }
+
+            else
+            {
+                ShowInvaildMoveMessage();
+            }
+
+        }
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Color whiteColor = Color.White;
