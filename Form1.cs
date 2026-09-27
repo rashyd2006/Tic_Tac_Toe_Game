@@ -74,6 +74,21 @@ namespace WindowsFormsApp7
                 ShowInvaildMoveMessage();
             }
         }
+        private void RestartGame()
+        { 
+            button2.Image = Image.FromFile(@"c:\question-mark-96.png");
+            button3.Image = Image.FromFile(@"c:\question-mark-96.png");
+            button4.Image = Image.FromFile(@"c:\question-mark-96.png");
+            button5.Image = Image.FromFile(@"c:\question-mark-96.png");
+            button6.Image = Image.FromFile(@"c:\question-mark-96.png");
+            button7.Image = Image.FromFile(@"c:\question-mark-96.png");
+            button8.Image = Image.FromFile(@"c:\question-mark-96.png");
+            button9.Image = Image.FromFile(@"c:\question-mark-96.png");
+            button10.Image = Image.FromFile(@"c:\question-mark-96.png");
+
+            label4.Text = "Player1";
+            label5.Text = "In Progress";
+        }
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Color whiteColor = Color.White;
@@ -86,6 +101,11 @@ namespace WindowsFormsApp7
             // رسم الخطين العموديين (إزاحة كبيرة لليسار)
             e.Graphics.DrawLine(myPen, 360, 80, 360, 560);
             e.Graphics.DrawLine(myPen, 520, 80, 520, 560);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RestartGame();
         }
     }
 }
