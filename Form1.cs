@@ -16,7 +16,7 @@ namespace WindowsFormsApp7
         {
             InitializeComponent();
         }
-
+        private int Count = 0;
         private bool IsDraw(int count)
         {
             return count == 9;
@@ -29,7 +29,6 @@ namespace WindowsFormsApp7
         {
             return (count % 2 != 0) ? "Player1" : "Player2";
         }
-
         private bool IsButtonAvailable(object sender)
         {
             Button Currentbutton = (Button)sender;
@@ -63,11 +62,8 @@ namespace WindowsFormsApp7
         {
             MessageBox.Show("Wrong Choice", "Wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
         private void PreparingAndDisplayingTheEventOnTheScreen(object sender)
         {
-            int Count = 0;
-
             if (IsButtonAvailable(sender))
             {
                 MakeMove(sender, ref Count);
@@ -77,7 +73,6 @@ namespace WindowsFormsApp7
             {
                 ShowInvaildMoveMessage();
             }
-
         }
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
