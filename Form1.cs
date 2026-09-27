@@ -29,6 +29,40 @@ namespace WindowsFormsApp7
         {
             return (count % 2 != 0) ? "Player1" : "Player2";
         }
+
+        private bool IsButtonAvailable(object sender)
+        {
+            Button Currentbutton = (Button)sender;
+
+            if (Currentbutton.Tag.ToString() == "?")
+            {
+                return true;
+            }
+
+            return false;
+        }
+        private void MakeMove(object sender, ref int Count)
+        {
+            Button Currentbutton = (Button)sender;
+
+            Count++;
+
+            if (Count % 2 != 0)
+            {
+                Currentbutton.Image = Image.FromFile(@"c:\X.png");
+                Currentbutton.Tag = "X";
+            }
+
+            else
+            {
+                Currentbutton.Image = Image.FromFile(@"c:\O.png");
+                Currentbutton.Tag = "O";
+            }
+        }
+        private void ShowInvaildMoveMessage()
+        {
+            MessageBox.Show("Wrong Choice", "Wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Color whiteColor = Color.White;
