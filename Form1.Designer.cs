@@ -29,208 +29,228 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblTurnText = new System.Windows.Forms.Label();
-            this.lblWinnerText = new System.Windows.Forms.Label();
-            this.btnRestartGame = new System.Windows.Forms.Button();
-            this.btn1 = new System.Windows.Forms.Button();
-            this.btn2 = new System.Windows.Forms.Button();
-            this.btn3 = new System.Windows.Forms.Button();
-            this.btn4 = new System.Windows.Forms.Button();
-            this.btn5 = new System.Windows.Forms.Button();
-            this.btn6 = new System.Windows.Forms.Button();
-            this.btn7 = new System.Windows.Forms.Button();
-            this.btn8 = new System.Windows.Forms.Button();
-            this.btn9 = new System.Windows.Forms.Button();
-            this.lblCurrentPlayer = new System.Windows.Forms.Label();
-            this.lblGameStatus = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lblTitle
+            // label1
             // 
-            this.lblTitle.Font = new System.Drawing.Font("Stencil", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(141, 26);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(564, 63);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Tic-Tac-Toe Game";
+            this.label1.Font = new System.Drawing.Font("Stencil", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(121, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(483, 51);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tic-Tac-Toe Game";
             // 
-            // lblTurnText
+            // label2
             // 
-            this.lblTurnText.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTurnText.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lblTurnText.Location = new System.Drawing.Point(42, 188);
-            this.lblTurnText.Name = "lblTurnText";
-            this.lblTurnText.Size = new System.Drawing.Size(81, 34);
-            this.lblTurnText.TabIndex = 1;
-            this.lblTurnText.Text = "Turn";
+            this.label2.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label2.Location = new System.Drawing.Point(36, 153);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 28);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Turn";
             // 
-            // lblWinnerText
+            // label3
             // 
-            this.lblWinnerText.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWinnerText.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lblWinnerText.Location = new System.Drawing.Point(32, 352);
-            this.lblWinnerText.Name = "lblWinnerText";
-            this.lblWinnerText.Size = new System.Drawing.Size(122, 33);
-            this.lblWinnerText.TabIndex = 2;
-            this.lblWinnerText.Text = "Winner";
+            this.label3.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label3.Location = new System.Drawing.Point(27, 286);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 27);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Winner";
             // 
-            // btnRestartGame
+            // button1
             // 
-            this.btnRestartGame.BackColor = System.Drawing.Color.Black;
-            this.btnRestartGame.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRestartGame.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnRestartGame.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRestartGame.Location = new System.Drawing.Point(12, 508);
-            this.btnRestartGame.Name = "btnRestartGame";
-            this.btnRestartGame.Size = new System.Drawing.Size(180, 42);
-            this.btnRestartGame.TabIndex = 3;
-            this.btnRestartGame.Text = "Restart Game";
-            this.btnRestartGame.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(10, 413);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 34);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Restart Game";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // btn1
+            // button2
             // 
-            this.btn1.BackColor = System.Drawing.Color.Black;
-            this.btn1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn1.BackgroundImage")));
-            this.btn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn1.Location = new System.Drawing.Point(272, 150);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(120, 120);
-            this.btn1.TabIndex = 4;
-            this.btn1.UseVisualStyleBackColor = false;
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Location = new System.Drawing.Point(233, 122);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 98);
+            this.button2.TabIndex = 4;
+            this.button2.Tag = "?";
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // btn2
+            // button3
             // 
-            this.btn2.BackColor = System.Drawing.Color.Black;
-            this.btn2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn2.BackgroundImage")));
-            this.btn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn2.Location = new System.Drawing.Point(449, 150);
-            this.btn2.Name = "btn2";
-            this.btn2.Size = new System.Drawing.Size(120, 120);
-            this.btn2.TabIndex = 5;
-            this.btn2.UseVisualStyleBackColor = false;
+            this.button3.BackColor = System.Drawing.Color.Black;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Location = new System.Drawing.Point(385, 122);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(103, 98);
+            this.button3.TabIndex = 5;
+            this.button3.Tag = "?";
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // btn3
+            // button4
             // 
-            this.btn3.BackColor = System.Drawing.Color.Black;
-            this.btn3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn3.BackgroundImage")));
-            this.btn3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn3.Location = new System.Drawing.Point(631, 150);
-            this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(120, 120);
-            this.btn3.TabIndex = 6;
-            this.btn3.UseVisualStyleBackColor = false;
+            this.button4.BackColor = System.Drawing.Color.Black;
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Location = new System.Drawing.Point(541, 122);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(103, 98);
+            this.button4.TabIndex = 6;
+            this.button4.Tag = "?";
+            this.button4.UseVisualStyleBackColor = false;
             // 
-            // btn4
+            // button5
             // 
-            this.btn4.BackColor = System.Drawing.Color.Black;
-            this.btn4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn4.BackgroundImage")));
-            this.btn4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn4.Location = new System.Drawing.Point(272, 332);
-            this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(120, 120);
-            this.btn4.TabIndex = 7;
-            this.btn4.UseVisualStyleBackColor = false;
+            this.button5.BackColor = System.Drawing.Color.Black;
+            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Location = new System.Drawing.Point(233, 270);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(103, 98);
+            this.button5.TabIndex = 7;
+            this.button5.Tag = "?";
+            this.button5.UseVisualStyleBackColor = false;
             // 
-            // btn5
+            // button6
             // 
-            this.btn5.BackColor = System.Drawing.Color.Black;
-            this.btn5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn5.BackgroundImage")));
-            this.btn5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn5.Location = new System.Drawing.Point(449, 332);
-            this.btn5.Name = "btn5";
-            this.btn5.Size = new System.Drawing.Size(120, 120);
-            this.btn5.TabIndex = 8;
-            this.btn5.UseVisualStyleBackColor = false;
+            this.button6.BackColor = System.Drawing.Color.Black;
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.Location = new System.Drawing.Point(385, 270);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(103, 98);
+            this.button6.TabIndex = 8;
+            this.button6.Tag = "?";
+            this.button6.UseVisualStyleBackColor = false;
             // 
-            // btn6
+            // button7
             // 
-            this.btn6.BackColor = System.Drawing.Color.Black;
-            this.btn6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn6.BackgroundImage")));
-            this.btn6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn6.Location = new System.Drawing.Point(631, 332);
-            this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(120, 120);
-            this.btn6.TabIndex = 9;
-            this.btn6.UseVisualStyleBackColor = false;
+            this.button7.BackColor = System.Drawing.Color.Black;
+            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button7.Location = new System.Drawing.Point(541, 270);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(103, 98);
+            this.button7.TabIndex = 9;
+            this.button7.Tag = "?";
+            this.button7.UseVisualStyleBackColor = false;
             // 
-            // btn7
+            // button8
             // 
-            this.btn7.BackColor = System.Drawing.Color.Black;
-            this.btn7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn7.BackgroundImage")));
-            this.btn7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn7.Location = new System.Drawing.Point(272, 520);
-            this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(120, 120);
-            this.btn7.TabIndex = 10;
-            this.btn7.UseVisualStyleBackColor = false;
+            this.button8.BackColor = System.Drawing.Color.Black;
+            this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button8.Location = new System.Drawing.Point(233, 422);
+            this.button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(103, 98);
+            this.button8.TabIndex = 10;
+            this.button8.Tag = "?";
+            this.button8.UseVisualStyleBackColor = false;
             // 
-            // btn8
+            // button9
             // 
-            this.btn8.BackColor = System.Drawing.Color.Black;
-            this.btn8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn8.BackgroundImage")));
-            this.btn8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn8.Location = new System.Drawing.Point(449, 520);
-            this.btn8.Name = "btn8";
-            this.btn8.Size = new System.Drawing.Size(120, 120);
-            this.btn8.TabIndex = 11;
-            this.btn8.UseVisualStyleBackColor = false;
+            this.button9.BackColor = System.Drawing.Color.Black;
+            this.button9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button9.BackgroundImage")));
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button9.Location = new System.Drawing.Point(385, 422);
+            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(103, 98);
+            this.button9.TabIndex = 11;
+            this.button9.Tag = "?";
+            this.button9.UseVisualStyleBackColor = false;
             // 
-            // btn9
+            // button10
             // 
-            this.btn9.BackColor = System.Drawing.Color.Black;
-            this.btn9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn9.BackgroundImage")));
-            this.btn9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn9.Location = new System.Drawing.Point(631, 520);
-            this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(120, 120);
-            this.btn9.TabIndex = 12;
-            this.btn9.UseVisualStyleBackColor = false;
+            this.button10.BackColor = System.Drawing.Color.Black;
+            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button10.Location = new System.Drawing.Point(541, 422);
+            this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(103, 98);
+            this.button10.TabIndex = 12;
+            this.button10.Tag = "?";
+            this.button10.UseVisualStyleBackColor = false;
             // 
-            // lblCurrentPlayer
+            // label4
             // 
-            this.lblCurrentPlayer.BackColor = System.Drawing.Color.Black;
-            this.lblCurrentPlayer.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurrentPlayer.ForeColor = System.Drawing.Color.White;
-            this.lblCurrentPlayer.Location = new System.Drawing.Point(32, 265);
-            this.lblCurrentPlayer.Name = "lblCurrentPlayer";
-            this.lblCurrentPlayer.Size = new System.Drawing.Size(137, 43);
-            this.lblCurrentPlayer.TabIndex = 13;
-            this.lblCurrentPlayer.Text = "Player1";
+            this.label4.BackColor = System.Drawing.Color.Black;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(27, 215);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(117, 35);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Player1";
             // 
-            // lblGameStatus
+            // label5
             // 
-            this.lblGameStatus.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGameStatus.ForeColor = System.Drawing.Color.LimeGreen;
-            this.lblGameStatus.Location = new System.Drawing.Point(12, 423);
-            this.lblGameStatus.Name = "lblGameStatus";
-            this.lblGameStatus.Size = new System.Drawing.Size(179, 39);
-            this.lblGameStatus.TabIndex = 14;
-            this.lblGameStatus.Text = "In Progress";
+            this.label5.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label5.Location = new System.Drawing.Point(10, 344);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(153, 32);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "In Progress";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(858, 743);
-            this.Controls.Add(this.lblGameStatus);
-            this.Controls.Add(this.lblCurrentPlayer);
-            this.Controls.Add(this.btn9);
-            this.Controls.Add(this.btn8);
-            this.Controls.Add(this.btn7);
-            this.Controls.Add(this.btn6);
-            this.Controls.Add(this.btn5);
-            this.Controls.Add(this.btn4);
-            this.Controls.Add(this.btn3);
-            this.Controls.Add(this.btn2);
-            this.Controls.Add(this.btn1);
-            this.Controls.Add(this.btnRestartGame);
-            this.Controls.Add(this.lblWinnerText);
-            this.Controls.Add(this.lblTurnText);
-            this.Controls.Add(this.lblTitle);
+            this.ClientSize = new System.Drawing.Size(735, 604);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
@@ -240,21 +260,21 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label lblTurnText;
-        private System.Windows.Forms.Label lblWinnerText;
-        private System.Windows.Forms.Button btnRestartGame;
-        private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Button btn2;
-        private System.Windows.Forms.Button btn3;
-        private System.Windows.Forms.Button btn4;
-        private System.Windows.Forms.Button btn5;
-        private System.Windows.Forms.Button btn6;
-        private System.Windows.Forms.Button btn7;
-        private System.Windows.Forms.Button btn8;
-        private System.Windows.Forms.Button btn9;
-        private System.Windows.Forms.Label lblCurrentPlayer;
-        private System.Windows.Forms.Label lblGameStatus;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 
