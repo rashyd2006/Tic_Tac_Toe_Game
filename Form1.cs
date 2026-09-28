@@ -48,16 +48,16 @@ namespace WindowsFormsApp7
 
             if (Count % 2 != 0)
             {
-                Currentbutton.Image = Image.FromFile(@"c:\X.png");
+                Currentbutton.BackgroundImage = Image.FromFile(@"c:\X.png");
                 Currentbutton.Tag = "X";
-                label4.Text = "Player1";
+                label4.Text = "Player2";
             }
 
             else
             {
                 Currentbutton.Image = Image.FromFile(@"c:\O.png");
                 Currentbutton.Tag = "O";
-                label4.Text = "Player2";
+                label4.Text = "Player1";
             }
         }
         private void ShowInvaildMoveMessage()
@@ -77,16 +77,37 @@ namespace WindowsFormsApp7
             }
         }
         private void RestartGame()
-        { 
-            button2.Image = Image.FromFile(@"c:\question-mark-96.png");
-            button3.Image = Image.FromFile(@"c:\question-mark-96.png");
-            button4.Image = Image.FromFile(@"c:\question-mark-96.png");
-            button5.Image = Image.FromFile(@"c:\question-mark-96.png");
-            button6.Image = Image.FromFile(@"c:\question-mark-96.png");
-            button7.Image = Image.FromFile(@"c:\question-mark-96.png");
-            button8.Image = Image.FromFile(@"c:\question-mark-96.png");
-            button9.Image = Image.FromFile(@"c:\question-mark-96.png");
-            button10.Image = Image.FromFile(@"c:\question-mark-96.png");
+        {
+            Count = 0;
+
+            button2.BackgroundImage = Image.FromFile(@"c:\question-mark-96.png");
+            button2.Tag = "?";
+
+            button3.BackgroundImage = Image.FromFile(@"c:\question-mark-96.png");
+            button3.Tag = "?";
+
+            button4.BackgroundImage = Image.FromFile(@"c:\question-mark-96.png");
+            button4.Tag = "?";
+
+            button5.BackgroundImage = Image.FromFile(@"c:\question-mark-96.png");
+            button5.Tag = "?";
+
+            button6.BackgroundImage = Image.FromFile(@"c:\question-mark-96.png");
+            button6.Tag = "?";
+
+            button7.BackgroundImage = Image.FromFile(@"c:\question-mark-96.png");
+            button7.Tag = "?";
+
+            button8.BackgroundImage = Image.FromFile(@"c:\question-mark-96.png");
+            button8.Tag = "?";
+
+            button9.BackgroundImage = Image.FromFile(@"c:\question-mark-96.png");
+            button9.Tag = "?";
+
+            button10.BackgroundImage = Image.FromFile(@"c:\question-mark-96.png");
+            button10.Tag = "?";
+
+
 
             label4.Text = "Player1";
             label5.Text = "In Progress";
