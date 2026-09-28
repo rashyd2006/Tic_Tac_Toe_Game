@@ -89,6 +89,10 @@ namespace WindowsFormsApp7
             label4.Text = "Player1";
             label5.Text = "In Progress";
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RestartGame();
+        }
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Color whiteColor = Color.White;
@@ -102,10 +106,14 @@ namespace WindowsFormsApp7
             e.Graphics.DrawLine(myPen, 360, 80, 360, 560);
             e.Graphics.DrawLine(myPen, 520, 80, 520, 560);
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void AnnounceWinner(Button b1, Button b2, Button b3)
         {
-            RestartGame();
-        }
+            b1.BackColor = Color.LightGreen;
+            b2.BackColor = Color.LightGreen;
+            b3.BackColor = Color.LightGreen;
+
+            label5.Text = label4.Text;
+            ShowGameOverMessage();
+        }  
     }
 }
