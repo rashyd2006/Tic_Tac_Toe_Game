@@ -55,7 +55,7 @@ namespace WindowsFormsApp7
 
             else
             {
-                Currentbutton.Image = Image.FromFile(@"c:\O.png");
+                Currentbutton.BackgroundImage = Image.FromFile(@"c:\O.png");
                 Currentbutton.Tag = "O";
                 label4.Text = "Player1";
             }
@@ -167,6 +167,32 @@ namespace WindowsFormsApp7
         {
             PreparingAndDisplayingTheEventOnTheScreen(sender);
             CheckToSeeIfTheGameHasEndedForTheFirstButton();
+        }
+
+        private void CheckToSeeIfTheGameHasEndedForTheSecondButton()
+        {
+            if (!IsDraw(Count))
+            {
+                if (Convert.ToString(button3.Tag) == Convert.ToString(button2.Tag) && Convert.ToString(button3.Tag) == Convert.ToString(button4.Tag))
+                {
+                    AnnounceWinner(button2, button3, button4);
+                }
+
+                else if (Convert.ToString(button3.Tag) == Convert.ToString(button6.Tag) && Convert.ToString(button2.Tag) == Convert.ToString(button9.Tag))
+                {
+                    AnnounceWinner(button2, button6, button9);
+                }
+            }
+
+            else
+            {
+                ShowGameOverMessage();
+            }
+        }
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            PreparingAndDisplayingTheEventOnTheScreen(sender);
+            CheckToSeeIfTheGameHasEndedForTheSecondButton();
         }
     }
 }
