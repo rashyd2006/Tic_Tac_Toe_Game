@@ -225,5 +225,67 @@ namespace WindowsFormsApp7
             PreparingAndDisplayingTheEventOnTheScreen(sender);
             CheckToSeeIfTheGameHasEndedForTheThirdButton();
         }
+
+        private void CheckToSeeIfTheGameHasEndedForTheFourthButton()
+        {
+            if (!IsDraw(Count))
+            {
+                if (Convert.ToString(button5.Tag) == Convert.ToString(button6.Tag) && Convert.ToString(button5.Tag) == Convert.ToString(button7.Tag))
+                {
+                    AnnounceWinner(button5, button6, button7);
+                }
+
+                else if (Convert.ToString(button5.Tag) == Convert.ToString(button2.Tag) && Convert.ToString(button5.Tag) == Convert.ToString(button8.Tag))
+                {
+                    AnnounceWinner(button2, button5, button8);
+                }
+            }
+
+            else
+            {
+                ShowGameOverMessage();
+            }
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            PreparingAndDisplayingTheEventOnTheScreen(sender);
+            CheckToSeeIfTheGameHasEndedForTheFourthButton();
+        }
+
+        private void CheckToSeeIfTheGameHasEndedForTheFifthButton()
+        {
+            if (!IsDraw(Count))
+            {
+                if (Convert.ToString(button6.Tag) == Convert.ToString(button5.Tag) && Convert.ToString(button6.Tag) == Convert.ToString(button7.Tag))
+                {
+                    AnnounceWinner(button5, button6, button7);
+                }
+
+                else if (Convert.ToString(button6.Tag) == Convert.ToString(button3.Tag) && Convert.ToString(button6.Tag) == Convert.ToString(button9.Tag))
+                {
+                    AnnounceWinner(button3, button6, button9);
+                }
+
+                else if(Convert.ToString(button6.Tag) == Convert.ToString(button2.Tag) && Convert.ToString(button6.Tag) == Convert.ToString(button10.Tag))
+                {
+                    AnnounceWinner(button2, button6, button10);
+                }
+
+                else if(Convert.ToString(button6.Tag) == Convert.ToString(button4.Tag) && Convert.ToString(button6.Tag) == Convert.ToString(button8.Tag))
+                {
+                    AnnounceWinner(button4, button6, button8);
+                }
+            }
+
+            else
+            {
+                ShowGameOverMessage();
+            }
+        }
+        private void button6_Click(object sender, EventArgs e)
+        {
+            PreparingAndDisplayingTheEventOnTheScreen(sender);
+            CheckToSeeIfTheGameHasEndedForTheFifthButton();
+        }
     }
 }
