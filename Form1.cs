@@ -140,9 +140,9 @@ namespace WindowsFormsApp7
         }
         private void AnnounceWinner(Button b1, Button b2, Button b3)
         {
-            b1.BackColor = Color.LightGreen;
-            b2.BackColor = Color.LightGreen;
-            b3.BackColor = Color.LightGreen;
+            b1.BackColor = Color.Yellow;
+            b2.BackColor = Color.Yellow;
+            b3.BackColor = Color.Yellow;
 
             if(label4.Text == "Player1")
             {
