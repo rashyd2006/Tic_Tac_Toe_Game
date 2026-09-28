@@ -48,14 +48,16 @@ namespace WindowsFormsApp7
 
             if (Count % 2 != 0)
             {
-                Currentbutton.Image = Image.FromFile(@"c:\X.png");
+                Currentbutton.BackgroundImage = Image.FromFile(@"c:\X.png");
                 Currentbutton.Tag = "X";
+                label4.Text = "Player2";
             }
 
             else
             {
-                Currentbutton.Image = Image.FromFile(@"c:\O.png");
+                Currentbutton.BackgroundImage = Image.FromFile(@"c:\O.png");
                 Currentbutton.Tag = "O";
+                label4.Text = "Player1";
             }
         }
         private void ShowInvaildMoveMessage()
@@ -75,19 +77,53 @@ namespace WindowsFormsApp7
             }
         }
         private void RestartGame()
-        { 
-            button2.Image = Image.FromFile(@"c:\question-mark-96.png");
-            button3.Image = Image.FromFile(@"c:\question-mark-96.png");
-            button4.Image = Image.FromFile(@"c:\question-mark-96.png");
-            button5.Image = Image.FromFile(@"c:\question-mark-96.png");
-            button6.Image = Image.FromFile(@"c:\question-mark-96.png");
-            button7.Image = Image.FromFile(@"c:\question-mark-96.png");
-            button8.Image = Image.FromFile(@"c:\question-mark-96.png");
-            button9.Image = Image.FromFile(@"c:\question-mark-96.png");
-            button10.Image = Image.FromFile(@"c:\question-mark-96.png");
+        {
+            Count = 0;
+
+            button2.BackgroundImage = Image.FromFile(@"c:\question-mark-96.png");
+            button2.Tag = "?";
+            button2.BackColor = Color.Black;
+
+            button3.BackgroundImage = Image.FromFile(@"c:\question-mark-96.png");
+            button3.Tag = "?";
+            button3.BackColor = Color.Black;
+
+            button4.BackgroundImage = Image.FromFile(@"c:\question-mark-96.png");
+            button4.Tag = "?";
+            button4.BackColor = Color.Black;
+
+            button5.BackgroundImage = Image.FromFile(@"c:\question-mark-96.png");
+            button5.Tag = "?";
+            button5.BackColor = Color.Black;
+
+            button6.BackgroundImage = Image.FromFile(@"c:\question-mark-96.png");
+            button6.Tag = "?";
+            button6.BackColor = Color.Black;
+
+            button7.BackgroundImage = Image.FromFile(@"c:\question-mark-96.png");
+            button7.Tag = "?";
+            button7.BackColor = Color.Black;
+
+            button8.BackgroundImage = Image.FromFile(@"c:\question-mark-96.png");
+            button8.Tag = "?";
+            button8.BackColor = Color.Black;
+
+            button9.BackgroundImage = Image.FromFile(@"c:\question-mark-96.png");
+            button9.Tag = "?";
+            button9.BackColor = Color.Black;
+
+            button10.BackgroundImage = Image.FromFile(@"c:\question-mark-96.png");
+            button10.Tag = "?";
+            button10.BackColor = Color.Black;
+
+
 
             label4.Text = "Player1";
             label5.Text = "In Progress";
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RestartGame();
         }
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
@@ -102,10 +138,278 @@ namespace WindowsFormsApp7
             e.Graphics.DrawLine(myPen, 360, 80, 360, 560);
             e.Graphics.DrawLine(myPen, 520, 80, 520, 560);
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void AnnounceWinner(Button b1, Button b2, Button b3)
         {
-            RestartGame();
+            b1.BackColor = Color.Yellow;
+            b2.BackColor = Color.Yellow;
+            b3.BackColor = Color.Yellow;
+
+            if(label4.Text == "Player1")
+            {
+                label5.Text = "Player2";
+            }
+
+            else
+            {
+                label5.Text = "Player1";
+            }
+
+
+            ShowGameOverMessage();
+        }
+        private void CheckToSeeIfTheGameHasEndedForTheFirstButton()
+        {
+            if (!IsDraw(Count))
+            {
+                if (Convert.ToString(button2.Tag) == Convert.ToString(button3.Tag) && Convert.ToString(button2.Tag) == Convert.ToString(button4.Tag))
+                {
+                    AnnounceWinner(button2, button3, button4);
+                }
+
+                else if (Convert.ToString(button2.Tag) == Convert.ToString(button6.Tag) && Convert.ToString(button2.Tag) == Convert.ToString(button10.Tag))
+                {
+                    AnnounceWinner(button2, button6, button10);
+                }
+
+                else if (Convert.ToString(button2.Tag) == Convert.ToString(button5.Tag) && Convert.ToString(button2.Tag) == Convert.ToString(button8.Tag))
+                {
+                    AnnounceWinner(button2, button5, button8);
+                }
+            }
+
+            else
+            {
+                ShowGameOverMessage();
+            }
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PreparingAndDisplayingTheEventOnTheScreen(sender);
+            CheckToSeeIfTheGameHasEndedForTheFirstButton();
+        }
+
+        private void CheckToSeeIfTheGameHasEndedForTheSecondButton()
+        {
+            if (!IsDraw(Count))
+            {
+                if (Convert.ToString(button3.Tag) == Convert.ToString(button2.Tag) && Convert.ToString(button3.Tag) == Convert.ToString(button4.Tag))
+                {
+                    AnnounceWinner(button2, button3, button4);
+                }
+
+                else if (Convert.ToString(button3.Tag) == Convert.ToString(button6.Tag) && Convert.ToString(button2.Tag) == Convert.ToString(button9.Tag))
+                {
+                    AnnounceWinner(button2, button6, button9);
+                }
+            }
+
+            else
+            {
+                ShowGameOverMessage();
+            }
+        }
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            PreparingAndDisplayingTheEventOnTheScreen(sender);
+            CheckToSeeIfTheGameHasEndedForTheSecondButton();
+        }
+
+        private void CheckToSeeIfTheGameHasEndedForTheThirdButton()
+        {
+            if (!IsDraw(Count))
+            {
+                if (Convert.ToString(button4.Tag) == Convert.ToString(button3.Tag) && Convert.ToString(button4.Tag) == Convert.ToString(button2.Tag))
+                {
+                    AnnounceWinner(button4, button3, button2);
+                }
+
+                else if (Convert.ToString(button4.Tag) == Convert.ToString(button7.Tag) && Convert.ToString(button4.Tag) == Convert.ToString(button10.Tag))
+                {
+                    AnnounceWinner(button4, button7, button10);
+                }
+
+                else if(Convert.ToString(button4.Tag) == Convert.ToString(button6.Tag) && Convert.ToString(button4.Tag) == Convert.ToString(button8.Tag))
+                {
+                    AnnounceWinner(button4, button6, button8);
+                }
+            }
+
+            else
+            {
+                ShowGameOverMessage();
+            }
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            PreparingAndDisplayingTheEventOnTheScreen(sender);
+            CheckToSeeIfTheGameHasEndedForTheThirdButton();
+        }
+
+        private void CheckToSeeIfTheGameHasEndedForTheFourthButton()
+        {
+            if (!IsDraw(Count))
+            {
+                if (Convert.ToString(button5.Tag) == Convert.ToString(button6.Tag) && Convert.ToString(button5.Tag) == Convert.ToString(button7.Tag))
+                {
+                    AnnounceWinner(button5, button6, button7);
+                }
+
+                else if (Convert.ToString(button5.Tag) == Convert.ToString(button2.Tag) && Convert.ToString(button5.Tag) == Convert.ToString(button8.Tag))
+                {
+                    AnnounceWinner(button2, button5, button8);
+                }
+            }
+
+            else
+            {
+                ShowGameOverMessage();
+            }
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            PreparingAndDisplayingTheEventOnTheScreen(sender);
+            CheckToSeeIfTheGameHasEndedForTheFourthButton();
+        }
+
+        private void CheckToSeeIfTheGameHasEndedForTheFifthButton()
+        {
+            if (!IsDraw(Count))
+            {
+                if (Convert.ToString(button6.Tag) == Convert.ToString(button5.Tag) && Convert.ToString(button6.Tag) == Convert.ToString(button7.Tag))
+                {
+                    AnnounceWinner(button5, button6, button7);
+                }
+
+                else if (Convert.ToString(button6.Tag) == Convert.ToString(button3.Tag) && Convert.ToString(button6.Tag) == Convert.ToString(button9.Tag))
+                {
+                    AnnounceWinner(button3, button6, button9);
+                }
+
+                else if(Convert.ToString(button6.Tag) == Convert.ToString(button2.Tag) && Convert.ToString(button6.Tag) == Convert.ToString(button10.Tag))
+                {
+                    AnnounceWinner(button2, button6, button10);
+                }
+
+                else if(Convert.ToString(button6.Tag) == Convert.ToString(button4.Tag) && Convert.ToString(button6.Tag) == Convert.ToString(button8.Tag))
+                {
+                    AnnounceWinner(button4, button6, button8);
+                }
+            }
+
+            else
+            {
+                ShowGameOverMessage();
+            }
+        }
+        private void button6_Click(object sender, EventArgs e)
+        {
+            PreparingAndDisplayingTheEventOnTheScreen(sender);
+            CheckToSeeIfTheGameHasEndedForTheFifthButton();
+        }
+
+
+        private void CheckToSeeIfTheGameHasEndedForTheSixthButton()
+        {
+            if (!IsDraw(Count))
+            {
+                if (Convert.ToString(button7.Tag) == Convert.ToString(button4.Tag) && Convert.ToString(button7.Tag) == Convert.ToString(button10.Tag))
+                {
+                    AnnounceWinner(button4, button7, button10);
+                }
+
+                else if (Convert.ToString(button7.Tag) == Convert.ToString(button6.Tag) && Convert.ToString(button7.Tag) == Convert.ToString(button5.Tag))
+                {
+                    AnnounceWinner(button5, button6, button7);
+                }
+            }
+
+            else
+            {
+                ShowGameOverMessage();
+            }
+        }
+        private void button7_Click(object sender, EventArgs e)
+        {
+            PreparingAndDisplayingTheEventOnTheScreen(sender);
+            CheckToSeeIfTheGameHasEndedForTheSixthButton();
+        }
+
+        private void CheckToSeeIfTheGameHasEndedForTheSeventhButton()
+        {
+            if (!IsDraw(Count))
+            {
+                if (Convert.ToString(button8.Tag) == Convert.ToString(button9.Tag) && Convert.ToString(button8.Tag) == Convert.ToString(button10.Tag))
+                {
+                    AnnounceWinner(button8, button9, button10);
+                }
+
+                else if (Convert.ToString(button8.Tag) == Convert.ToString(button5.Tag) && Convert.ToString(button8.Tag) == Convert.ToString(button2.Tag))
+                {
+                    AnnounceWinner(button2, button5, button8);
+                }
+            }
+
+            else
+            {
+                ShowGameOverMessage();
+            }
+        }
+        private void button8_Click(object sender, EventArgs e)
+        {
+            PreparingAndDisplayingTheEventOnTheScreen(sender);
+            CheckToSeeIfTheGameHasEndedForTheSeventhButton();
+        }
+
+        private void CheckToSeeIfTheGameHasEndedForTheEighthButton()
+        {
+            if (!IsDraw(Count))
+            {
+                if (Convert.ToString(button9.Tag) == Convert.ToString(button8.Tag) && Convert.ToString(button9.Tag) == Convert.ToString(button10.Tag))
+                {
+                    AnnounceWinner(button8, button9, button10);
+                }
+
+                else if (Convert.ToString(button9.Tag) == Convert.ToString(button6.Tag) && Convert.ToString(button9.Tag) == Convert.ToString(button3.Tag))
+                {
+                    AnnounceWinner(button3, button6, button9);
+                }
+            }
+
+            else
+            {
+                ShowGameOverMessage();
+            }
+        }
+        private void button9_Click(object sender, EventArgs e)
+        {
+            PreparingAndDisplayingTheEventOnTheScreen(sender);
+            CheckToSeeIfTheGameHasEndedForTheEighthButton();
+        }
+
+        private void CheckToSeeIfTheGameHasEndedForTheNinthButton()
+        {
+            if (!IsDraw(Count))
+            {
+                if (Convert.ToString(button10.Tag) == Convert.ToString(button7.Tag) && Convert.ToString(button10.Tag) == Convert.ToString(button4.Tag))
+                {
+                    AnnounceWinner(button4, button7, button10);
+                }
+
+                else if (Convert.ToString(button10.Tag) == Convert.ToString(button6.Tag) && Convert.ToString(button10.Tag) == Convert.ToString(button2.Tag))
+                {
+                    AnnounceWinner(button2, button6, button10);
+                }
+            }
+
+            else
+            {
+                ShowGameOverMessage();
+            }
+        }
+        private void button10_Click(object sender, EventArgs e)
+        {
+            PreparingAndDisplayingTheEventOnTheScreen(sender);
+            CheckToSeeIfTheGameHasEndedForTheNinthButton();
         }
     }
 }
