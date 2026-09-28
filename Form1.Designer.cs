@@ -176,6 +176,7 @@
             this.button7.TabIndex = 9;
             this.button7.Tag = "?";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 

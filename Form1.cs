@@ -287,5 +287,32 @@ namespace WindowsFormsApp7
             PreparingAndDisplayingTheEventOnTheScreen(sender);
             CheckToSeeIfTheGameHasEndedForTheFifthButton();
         }
+
+
+        private void CheckToSeeIfTheGameHasEndedForTheSixthButton()
+        {
+            if (!IsDraw(Count))
+            {
+                if (Convert.ToString(button7.Tag) == Convert.ToString(button4.Tag) && Convert.ToString(button7.Tag) == Convert.ToString(button10.Tag))
+                {
+                    AnnounceWinner(button4, button7, button10);
+                }
+
+                else if (Convert.ToString(button7.Tag) == Convert.ToString(button6.Tag) && Convert.ToString(button7.Tag) == Convert.ToString(button5.Tag))
+                {
+                    AnnounceWinner(button5, button6, button7);
+                }
+            }
+
+            else
+            {
+                ShowGameOverMessage();
+            }
+        }
+        private void button7_Click(object sender, EventArgs e)
+        {
+            PreparingAndDisplayingTheEventOnTheScreen(sender);
+            CheckToSeeIfTheGameHasEndedForTheSixthButton();
+        }
     }
 }
