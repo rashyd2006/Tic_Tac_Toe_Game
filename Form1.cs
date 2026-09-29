@@ -131,7 +131,31 @@ namespace WindowsFormsApp7
             }
 
         }
+        private void GameButton_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
 
+            if (btn.Tag.ToString() != "?") return;
+
+            Count++;
+
+            if(Count % 2 != 0)
+            {
+                btn.BackgroundImage = Resources.X;
+                btn.Tag = "X";
+                label4.Text = "Player2";
+            }
+
+            else
+            {
+
+                btn.BackgroundImage = Resources.O;
+                btn.Tag = "O";
+                label4.Text = "Player1";
+            }
+
+            CheckGameState();
+        }
 
     }
 
