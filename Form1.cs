@@ -4,9 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp7.Properties;
 
 namespace WindowsFormsApp7
 {
@@ -79,6 +82,17 @@ namespace WindowsFormsApp7
             // رسم الخطين العموديين (إزاحة كبيرة لليسار)
             e.Graphics.DrawLine(myPen, 360, 80, 360, 560);
             e.Graphics.DrawLine(myPen, 520, 80, 520, 560);
+        }
+        private void AnnounceWinneer(Button b1, Button b2, Button b3, string winningTag)
+        {
+            b1.BackColor = Color.Yellow;
+            b2.BackColor = Color.Yellow;
+            b3.BackColor = Color.Yellow;
+
+            string winner = (winningTag == "X") ? "Player1" : "Player2";
+            label5.Text = winner + "wins!";
+
+            MessageBox.Show(winner + " Wins!", "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
     }
