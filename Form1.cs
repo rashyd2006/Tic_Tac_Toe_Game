@@ -62,5 +62,10 @@ namespace WindowsFormsApp7
             label4.Text = "Player1";
             label5.Text = "In Progress";
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RestartGame();
+        }
+        
     }
 }
