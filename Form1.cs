@@ -91,7 +91,7 @@ namespace WindowsFormsApp7
             b3.BackColor = Color.Yellow;
 
             string winner = (winningTag == "X") ? "Player1" : "Player2";
-            label5.Text = winner + "wins!";
+            label5.Text = winner + " wins!";
 
             MessageBox.Show(winner + " Wins!", "GameOver", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -135,8 +135,12 @@ namespace WindowsFormsApp7
         {
             Button btn = (Button)sender;
 
-            if (btn.Tag.ToString() != "?") return;
-
+            if (btn.Tag.ToString() != "?")
+            {
+                MessageBox.Show("Wrong Choice", "Wrong", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             Count++;
 
             if(Count % 2 != 0)
@@ -148,7 +152,6 @@ namespace WindowsFormsApp7
 
             else
             {
-
                 btn.BackgroundImage = Resources.O;
                 btn.Tag = "O";
                 label4.Text = "Player1";
@@ -156,7 +159,6 @@ namespace WindowsFormsApp7
 
             CheckGameState();
         }
-
     }
 
 }

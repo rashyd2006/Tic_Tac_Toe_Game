@@ -239,7 +239,7 @@
             this.label5.Location = new System.Drawing.Point(31, 414);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(178, 39);
+            this.label5.Size = new System.Drawing.Size(214, 39);
             this.label5.TabIndex = 14;
             this.label5.Text = "In Progress";
             // 
